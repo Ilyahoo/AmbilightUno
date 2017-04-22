@@ -19,7 +19,7 @@ void setup(){
 
 void loop(){
 
-  if (Serial.available()>=4) {
+  if (Serial.available()>=1) {
     if(Serial.read() == 0x4A){              //4A just a marker to ensure proper synchronization
       for(uint8_t i = 0; i < 12; i++){ 
 	ColorData[i] = Serial.read();		  //followed by RGB bytes  
